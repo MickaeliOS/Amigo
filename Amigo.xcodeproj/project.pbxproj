@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		835326B62B4559C7007472D0 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835326B52B4559C7007472D0 /* CustomError.swift */; };
+		835326B92B459830007472D0 /* SignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835326B82B459830007472D0 /* SignInTests.swift */; };
+		835326BD2B459A77007472D0 /* AuthErrorCodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835326BC2B459A77007472D0 /* AuthErrorCodeExtension.swift */; };
+		835326BF2B459B4F007472D0 /* AuthenticationTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835326BE2B459B4F007472D0 /* AuthenticationTools.swift */; };
+		8368C3F92ACEA35D005CD4BF /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368C3F82ACEA35D005CD4BF /* FirestoreService.swift */; };
+		8368C3FB2ACEA780005CD4BF /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368C3FA2ACEA780005CD4BF /* FirebaseAuthService.swift */; };
 		838BCC8D2AC71016001084F5 /* AmigoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BCC8C2AC71016001084F5 /* AmigoApp.swift */; };
-		838BCC8F2AC71016001084F5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BCC8E2AC71016001084F5 /* LoginView.swift */; };
+		838BCC8F2AC71016001084F5 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BCC8E2AC71016001084F5 /* SignInView.swift */; };
 		838BCC912AC71017001084F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838BCC902AC71017001084F5 /* Assets.xcassets */; };
 		838BCC942AC71017001084F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838BCC932AC71017001084F5 /* Preview Assets.xcassets */; };
 		838BCC9F2AC71052001084F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 838BCC9E2AC71052001084F5 /* GoogleService-Info.plist */; };
@@ -19,17 +25,57 @@
 		838BCCAA2AC71073001084F5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 838BCCA92AC71073001084F5 /* FirebaseStorage */; };
 		838BCCAD2AC713D6001084F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BCCAC2AC713D6001084F5 /* User.swift */; };
 		838BCCAF2AC72BA2001084F5 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BCCAE2AC72BA2001084F5 /* CreateAccountView.swift */; };
+		838DB42E2B31A30C0072E7A4 /* CreateAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB42D2B31A30C0072E7A4 /* CreateAccountTests.swift */; };
+		838DB4352B31CBE40072E7A4 /* MockFirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB4342B31CBE40072E7A4 /* MockFirebaseAuthService.swift */; };
+		838DB4372B31CCE60072E7A4 /* MockFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB4362B31CCE60072E7A4 /* MockFirestoreService.swift */; };
+		83D2BAD92AC75ADC00B9BAAF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2BAD82AC75ADC00B9BAAF /* SessionManager.swift */; };
+		83D2BADB2AC75CBE00B9BAAF /* CreateTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2BADA2AC75CBE00B9BAAF /* CreateTripView.swift */; };
+		83D2BAE22ACC41F600B9BAAF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 83D2BAE12ACC41F600B9BAAF /* FirebaseFirestoreSwift */; };
+		83D2BAE42ACC449A00B9BAAF /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2BAE32ACC449A00B9BAAF /* SignInViewModel.swift */; };
+		83D2BAE92ACC474800B9BAAF /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2BAE82ACC474800B9BAAF /* CreateAccountViewModel.swift */; };
+		83D2BAEC2ACC47E900B9BAAF /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2BAEB2ACC47E900B9BAAF /* PasswordView.swift */; };
+		83D2BAF82ACC9C8D00B9BAAF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2BAF72ACC9C8D00B9BAAF /* StringExtension.swift */; };
+		83DEBA032AF0F42D009A44E1 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEBA022AF0F42D009A44E1 /* HomeTabView.swift */; };
+		83DEBA052AF0F5F0009A44E1 /* HomeTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEBA042AF0F5F0009A44E1 /* HomeTabViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		838DB42F2B31A30C0072E7A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 838BCC812AC71016001084F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 838BCC882AC71016001084F5;
+			remoteInfo = Amigo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		835326B52B4559C7007472D0 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		835326B82B459830007472D0 /* SignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTests.swift; sourceTree = "<group>"; };
+		835326BC2B459A77007472D0 /* AuthErrorCodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorCodeExtension.swift; sourceTree = "<group>"; };
+		835326BE2B459B4F007472D0 /* AuthenticationTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTools.swift; sourceTree = "<group>"; };
+		8368C3F82ACEA35D005CD4BF /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		8368C3FA2ACEA780005CD4BF /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		838BCC892AC71016001084F5 /* Amigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838BCC8C2AC71016001084F5 /* AmigoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigoApp.swift; sourceTree = "<group>"; };
-		838BCC8E2AC71016001084F5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		838BCC8E2AC71016001084F5 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		838BCC902AC71017001084F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		838BCC932AC71017001084F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		838BCC9E2AC71052001084F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		838BCCAC2AC713D6001084F5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		838BCCAE2AC72BA2001084F5 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		838DB42B2B31A30C0072E7A4 /* AmigoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmigoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		838DB42D2B31A30C0072E7A4 /* CreateAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTests.swift; sourceTree = "<group>"; };
+		838DB4342B31CBE40072E7A4 /* MockFirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirebaseAuthService.swift; sourceTree = "<group>"; };
+		838DB4362B31CCE60072E7A4 /* MockFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreService.swift; sourceTree = "<group>"; };
+		83D2BAD82AC75ADC00B9BAAF /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		83D2BADA2AC75CBE00B9BAAF /* CreateTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripView.swift; sourceTree = "<group>"; };
+		83D2BAE32ACC449A00B9BAAF /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		83D2BAE82ACC474800B9BAAF /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		83D2BAEB2ACC47E900B9BAAF /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		83D2BAF72ACC9C8D00B9BAAF /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		83DEBA022AF0F42D009A44E1 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		83DEBA042AF0F5F0009A44E1 /* HomeTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,17 +88,46 @@
 				838BCCA22AC71073001084F5 /* FirebaseAnalytics in Frameworks */,
 				838BCCAA2AC71073001084F5 /* FirebaseStorage in Frameworks */,
 				838BCCA42AC71073001084F5 /* FirebaseAuth in Frameworks */,
+				83D2BAE22ACC41F600B9BAAF /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838DB4282B31A30C0072E7A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		835326BA2B459877007472D0 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				838DB4342B31CBE40072E7A4 /* MockFirebaseAuthService.swift */,
+				838DB4362B31CCE60072E7A4 /* MockFirestoreService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		8368C3F52ACE9EAF005CD4BF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8368C3FA2ACEA780005CD4BF /* FirebaseAuthService.swift */,
+				8368C3F82ACEA35D005CD4BF /* FirestoreService.swift */,
+				83D2BAD82AC75ADC00B9BAAF /* SessionManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		838BCC802AC71016001084F5 = {
 			isa = PBXGroup;
 			children = (
 				838BCC8B2AC71016001084F5 /* Amigo */,
+				838DB42C2B31A30C0072E7A4 /* AmigoTests */,
 				838BCC8A2AC71016001084F5 /* Products */,
+				83D2BAE02ACC41F600B9BAAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				838BCC892AC71016001084F5 /* Amigo.app */,
+				838DB42B2B31A30C0072E7A4 /* AmigoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +143,10 @@
 		838BCC8B2AC71016001084F5 /* Amigo */ = {
 			isa = PBXGroup;
 			children = (
-				838BCC9D2AC7102D001084F5 /* ViewModel */,
-				838BCC9C2AC7102A001084F5 /* View */,
+				838BCC9C2AC7102A001084F5 /* View+ViewModel */,
 				838BCC9B2AC71026001084F5 /* Model */,
+				8368C3F52ACE9EAF005CD4BF /* Service */,
+				83D2BAF62ACC9C8100B9BAAF /* Utilities */,
 				838BCC9A2AC7101A001084F5 /* Resources */,
 			);
 			path = Amigo;
@@ -102,20 +179,87 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		838BCC9C2AC7102A001084F5 /* View */ = {
+		838BCC9C2AC7102A001084F5 /* View+ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				838BCC8E2AC71016001084F5 /* LoginView.swift */,
-				838BCCAE2AC72BA2001084F5 /* CreateAccountView.swift */,
+				83DEB9FF2AF0F403009A44E1 /* HomeTabView */,
+				83D2BAEA2ACC47CD00B9BAAF /* CustomViews */,
+				83D2BAE52ACC46DF00B9BAAF /* Login */,
+				83D2BAE62ACC46FC00B9BAAF /* AccountCreation */,
+				83D2BAE72ACC470D00B9BAAF /* CreateTrip */,
 			);
-			path = View;
+			path = "View+ViewModel";
 			sourceTree = "<group>";
 		};
-		838BCC9D2AC7102D001084F5 /* ViewModel */ = {
+		838DB42C2B31A30C0072E7A4 /* AmigoTests */ = {
+			isa = PBXGroup;
+			children = (
+				838DB42D2B31A30C0072E7A4 /* CreateAccountTests.swift */,
+				835326B82B459830007472D0 /* SignInTests.swift */,
+				835326BA2B459877007472D0 /* Mock */,
+			);
+			path = AmigoTests;
+			sourceTree = "<group>";
+		};
+		83D2BAE02ACC41F600B9BAAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = ViewModel;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83D2BAE52ACC46DF00B9BAAF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				838BCC8E2AC71016001084F5 /* SignInView.swift */,
+				83D2BAE32ACC449A00B9BAAF /* SignInViewModel.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		83D2BAE62ACC46FC00B9BAAF /* AccountCreation */ = {
+			isa = PBXGroup;
+			children = (
+				838BCCAE2AC72BA2001084F5 /* CreateAccountView.swift */,
+				83D2BAE82ACC474800B9BAAF /* CreateAccountViewModel.swift */,
+			);
+			name = AccountCreation;
+			sourceTree = "<group>";
+		};
+		83D2BAE72ACC470D00B9BAAF /* CreateTrip */ = {
+			isa = PBXGroup;
+			children = (
+				83D2BADA2AC75CBE00B9BAAF /* CreateTripView.swift */,
+			);
+			name = CreateTrip;
+			sourceTree = "<group>";
+		};
+		83D2BAEA2ACC47CD00B9BAAF /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				83D2BAEB2ACC47E900B9BAAF /* PasswordView.swift */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		83D2BAF62ACC9C8100B9BAAF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				83D2BAF72ACC9C8D00B9BAAF /* StringExtension.swift */,
+				835326BC2B459A77007472D0 /* AuthErrorCodeExtension.swift */,
+				835326BE2B459B4F007472D0 /* AuthenticationTools.swift */,
+				835326B52B4559C7007472D0 /* CustomError.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		83DEB9FF2AF0F403009A44E1 /* HomeTabView */ = {
+			isa = PBXGroup;
+			children = (
+				83DEBA022AF0F42D009A44E1 /* HomeTabView.swift */,
+				83DEBA042AF0F5F0009A44E1 /* HomeTabViewModel.swift */,
+			);
+			name = HomeTabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +273,7 @@
 				838BCC862AC71016001084F5 /* Frameworks */,
 				838BCC872AC71016001084F5 /* Resources */,
 				838BCCAB2AC710E0001084F5 /* ShellScript */,
+				838DB4262B3193030072E7A4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -141,10 +286,29 @@
 				838BCCA52AC71073001084F5 /* FirebaseCrashlytics */,
 				838BCCA72AC71073001084F5 /* FirebaseFirestore */,
 				838BCCA92AC71073001084F5 /* FirebaseStorage */,
+				83D2BAE12ACC41F600B9BAAF /* FirebaseFirestoreSwift */,
 			);
 			productName = Amigo;
 			productReference = 838BCC892AC71016001084F5 /* Amigo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		838DB42A2B31A30C0072E7A4 /* AmigoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 838DB4312B31A30C0072E7A4 /* Build configuration list for PBXNativeTarget "AmigoTests" */;
+			buildPhases = (
+				838DB4272B31A30C0072E7A4 /* Sources */,
+				838DB4282B31A30C0072E7A4 /* Frameworks */,
+				838DB4292B31A30C0072E7A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				838DB4302B31A30C0072E7A4 /* PBXTargetDependency */,
+			);
+			name = AmigoTests;
+			productName = AmigoTests;
+			productReference = 838DB42B2B31A30C0072E7A4 /* AmigoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -153,11 +317,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					838BCC882AC71016001084F5 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					838DB42A2B31A30C0072E7A4 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 838BCC882AC71016001084F5;
 					};
 				};
 			};
@@ -178,6 +346,7 @@
 			projectRoot = "";
 			targets = (
 				838BCC882AC71016001084F5 /* Amigo */,
+				838DB42A2B31A30C0072E7A4 /* AmigoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +359,13 @@
 				838BCC942AC71017001084F5 /* Preview Assets.xcassets in Resources */,
 				838BCC912AC71017001084F5 /* Assets.xcassets in Resources */,
 				838BCC9F2AC71052001084F5 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838DB4292B31A30C0072E7A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +395,24 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
+		838DB4262B3193030072E7A4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -226,14 +420,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				838BCC8F2AC71016001084F5 /* LoginView.swift in Sources */,
+				838BCC8F2AC71016001084F5 /* SignInView.swift in Sources */,
+				83D2BAEC2ACC47E900B9BAAF /* PasswordView.swift in Sources */,
 				838BCC8D2AC71016001084F5 /* AmigoApp.swift in Sources */,
 				838BCCAF2AC72BA2001084F5 /* CreateAccountView.swift in Sources */,
+				83DEBA032AF0F42D009A44E1 /* HomeTabView.swift in Sources */,
+				835326B62B4559C7007472D0 /* CustomError.swift in Sources */,
+				83DEBA052AF0F5F0009A44E1 /* HomeTabViewModel.swift in Sources */,
+				83D2BADB2AC75CBE00B9BAAF /* CreateTripView.swift in Sources */,
 				838BCCAD2AC713D6001084F5 /* User.swift in Sources */,
+				8368C3F92ACEA35D005CD4BF /* FirestoreService.swift in Sources */,
+				83D2BAF82ACC9C8D00B9BAAF /* StringExtension.swift in Sources */,
+				835326BD2B459A77007472D0 /* AuthErrorCodeExtension.swift in Sources */,
+				83D2BAE92ACC474800B9BAAF /* CreateAccountViewModel.swift in Sources */,
+				83D2BAD92AC75ADC00B9BAAF /* SessionManager.swift in Sources */,
+				835326BF2B459B4F007472D0 /* AuthenticationTools.swift in Sources */,
+				83D2BAE42ACC449A00B9BAAF /* SignInViewModel.swift in Sources */,
+				8368C3FB2ACEA780005CD4BF /* FirebaseAuthService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838DB4272B31A30C0072E7A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838DB4352B31CBE40072E7A4 /* MockFirebaseAuthService.swift in Sources */,
+				838DB4372B31CCE60072E7A4 /* MockFirestoreService.swift in Sources */,
+				838DB42E2B31A30C0072E7A4 /* CreateAccountTests.swift in Sources */,
+				835326B92B459830007472D0 /* SignInTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		838DB4302B31A30C0072E7A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 838BCC882AC71016001084F5 /* Amigo */;
+			targetProxy = 838DB42F2B31A30C0072E7A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		838BCC952AC71017001084F5 /* Debug */ = {
@@ -272,6 +498,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -332,6 +559,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -367,6 +595,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +625,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,6 +636,53 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		838DB4322B31A30C0072E7A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UF8VBT3FGJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mickaelhorn.AmigoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amigo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Amigo";
+			};
+			name = Debug;
+		};
+		838DB4332B31A30C0072E7A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UF8VBT3FGJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mickaelhorn.AmigoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amigo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Amigo";
 			};
 			name = Release;
 		};
@@ -426,6 +703,15 @@
 			buildConfigurations = (
 				838BCC982AC71017001084F5 /* Debug */,
 				838BCC992AC71017001084F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		838DB4312B31A30C0072E7A4 /* Build configuration list for PBXNativeTarget "AmigoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				838DB4322B31A30C0072E7A4 /* Debug */,
+				838DB4332B31A30C0072E7A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -468,6 +754,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 838BCCA02AC71072001084F5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		83D2BAE12ACC41F600B9BAAF /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 838BCCA02AC71072001084F5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

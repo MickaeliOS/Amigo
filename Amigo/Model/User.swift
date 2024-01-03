@@ -7,10 +7,17 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
+    enum Gender: String, CaseIterable {
+        case male = "Male"
+        case female = "Female"
+        case other = "Other"
+    }
+
     let lastname: String
     let firstname: String
-    let age: Int
+    let email: String
+    let birthdate: Date
     let gender: String
-    var profilePicture: String
+    var profilePicture: String?
 }

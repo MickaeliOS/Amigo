@@ -1,25 +1,27 @@
 //
-//  LoginView.swift
+//  SignInView.swift
 //  Amigo
 //
 //  Created by Mickaël Horn on 29/09/2023.
 //
 
 import SwiftUI
+import FirebaseAuth // DELETE
 
-struct LoginView: View {
-    @State private var username = ""
-    @State private var password = ""
-    
+struct SignInView: View {
+    @StateObject private var viewModel = SignInViewModel()
+
     var body: some View {
         GeometryReader { proxy in
             VStack {
                 Text("Amigo")
                     .font(.largeTitle)
-                
+
                 Spacer()
-                
-                TextField("Username", text: $username)
+
+                TextField("Username", text: $viewModel.email)
+                    .keyboardType(.emailAddress)
+                    .textInputAutocapitalization(.never)
                     .frame(height: proxy.size.height * 0.06)
                     .padding()
                     .padding(.leading, 30)
@@ -30,9 +32,9 @@ struct LoginView: View {
                         .foregroundColor(.gray)
                         .padding(.leading, 15),
                     alignment: .leading)
-                
+
                 HStack {
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                         .frame(height: proxy.size.height * 0.06)
                         .padding()
                         .padding(.leading, 30)
@@ -43,12 +45,14 @@ struct LoginView: View {
                             .padding(.leading, 15),
                         alignment: .leading)
                 }
-                
+
                 HStack {
                     Spacer()
-                    
+
                     Button("Login") {
-                        //TODO: Rediriger vers le menu Home
+                        Task {
+                            await viewModel.signIn()
+                        }
                     }
                     .frame(width: proxy.frame(in: .local).midX)
                     .padding([.top, .bottom])
@@ -57,25 +61,32 @@ struct LoginView: View {
                     .foregroundColor(.white)
                     .font(.title2)
                 }
-                
+
                 Spacer()
-                
+
                 HStack {
                     Text("Don't have an account?")
-                    
-                    Button("Sign up") {
-                        //TODO: Rediriger vers le formulaire de création de compte
+
+                    NavigationLink {
+                        CreateAccountView()
+                    } label: {
+                        Text("Signup")
+                            .font(.headline)
                     }
-                    .font(.headline)
                 }
             }
         }
         .padding()
+        .alert("Login Error", isPresented: $viewModel.showingAlert) {
+            Button("OK") { }
+        } message: {
+            Text(viewModel.errorMessage)
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        SignInView()
     }
 }
